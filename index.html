@@ -1,3 +1,4 @@
+<!-- https://zahoruiko.github.io/HW_FE_221020/ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,12 +32,10 @@
             let newSpanElement = document.createElement("span");
             newSpanElement.innerText = searchResult;
             wrapper.appendChild(newSpanElement);
-            // Или так
-            let wrapper1 = document.getElementById("container1");
-            wrapper1.innerHTML = "<span>" + searchResult + "</span>";
+            // Или намного короче:
+            let wrapper1 = document.getElementById("container1").innerHTML = "<span>" + searchResult + "</span>";
         } else {
-            let wrapper1 = document.getElementById("container");
-            wrapper1.innerHTML = "<span>Item is not found!</span>";
+            let wrapper1 = document.getElementById("container").innerHTML = "<span>Item is not found!</span>";
         }
     </script>
 </body>
