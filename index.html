@@ -7,30 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="container" title="Вариант реализации №1"></div>
+    <div id="container" title="Implementation option No. 1"></div>
     <br>
-    <div id="container1" title="Вариант реализации №2"></div>    
+    <div id="container1" title="Implementation option No. 2"></div>    
     <script>
-        // Исходный массив
+        // Source array
         let arr = ["Mac Mini", "Iphone pro max", "Nokia 3110", "Mac Pro", "Mac Air"];
-        // Вариант поиска со стрелочной функцией
+        // Search option with arrow function
         let searchResult = arr.find(item => item == "Mac Pro");
-        // Вариант поиска с классической функцией
+        // A search option with a classic function
         // let searchResult = arr.find(function (item, index, array) {
         //     if (item == "Mac Pro") {
         //         return item;
         //     }
         // });
-        // Если зничение не было найдено, то будет переменная searchResult 
-        // получит значение 'undefined', что приведет к ошибке на следующем шаге
+        // If the value was not found, the search Result variable will get the value 'undefined', 
+        // which will lead to an error in the next step
         if (typeof searchResult !== 'undefined') {
             console.log(searchResult);
-            // Тег и текст можно добавить так
+            // The tag and text can be added like this
             let wrapper = document.getElementById("container");            
             let newSpanElement = document.createElement("span");
             newSpanElement.innerText = searchResult;
             wrapper.appendChild(newSpanElement);
-            // Или намного короче:
+            // Or much shorter:
             document.getElementById("container1").innerHTML = "<span>" + searchResult + "</span>";
         } else {
             document.getElementById("container").innerHTML = "<span>Item is not found!</span>";
